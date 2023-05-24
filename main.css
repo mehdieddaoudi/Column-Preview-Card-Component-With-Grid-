@@ -1,0 +1,128 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.my-project {
+    display: grid;
+    grid-template-columns: repeat(3, 255px);
+}
+
+.my-project .car1 {
+    background-color: hsl(31, 77%, 52%);
+    padding: 50px;
+}
+
+.my-project .car1 h1 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+}
+
+.my-project .car1 small {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 11px;
+}
+
+.my-project .car2 {
+    background-color: hsl(184, 100%, 22%);
+    padding: 50px;
+}
+
+.my-project .car2 h1 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+
+}
+
+.my-project .car2 small {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 11px;
+}
+
+.my-project .car3 {
+    background-color: hsl(179, 100%, 13%);
+    padding: 50px;
+}
+
+.my-project .car3 h1 {
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+
+}
+
+.my-project .car3 small {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 11px;
+}
+
+button {
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    text-transform: capitalize;
+    width: 70%;
+}
+
+.car1 .button button {
+    color: hsl(31, 77%, 52%);
+}
+
+.car2 .button button {
+    color: hsl(184, 100%, 22%);
+}
+
+.car3 .button button {
+    color: hsl(179, 100%, 13%);
+}
+
+@media (max-width:788px) {
+    .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .my-project {
+        grid-template-areas:
+            'car1'
+            'car2'
+            'car3';
+        grid-template-columns: repeat(1, 255px);
+    }
+
+    .my-project .car1 {
+        background-color: hsl(31, 77%, 52%);
+        padding: 50px;
+        grid-area: car1;
+    }
+
+    .my-project .car2 {
+        background-color: hsl(184, 100%, 22%);
+        padding: 50px;
+        grid-area: car2;
+    }
+
+    .my-project .car3 {
+        background-color: hsl(179, 100%, 13%);
+        padding: 50px;
+        grid-area: car3;
+    }
+}
